@@ -143,7 +143,7 @@ let tipoDePase, saldo
 tipoDePase = prompt("qué tipo de pase tienes?")
 saldo = Number(prompt("introduce tu saldo"))
 const puedePasar = "La persona puede pasar "
-if(tipoDePase === "vip" && saldo>1000){
+if(tipoDePase == "vip" && saldo>1000){
     console.log(puedePasar + "(true)")
 }
 else{

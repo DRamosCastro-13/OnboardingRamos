@@ -61,7 +61,7 @@ switch(colores) {
     break
 }
 
-*/
+
 //8
 let valor1,valor2
 valor1 = Number(prompt("Ingresa una cifra del 1 al 100"))
@@ -82,4 +82,99 @@ switch(operación) {
     case "división" :
         alert(`El cociente de ${valor1} / ${valor2} es ${valor1 / valor2}`)
     break
+}
+
+
+//9
+const persona1 = {
+    nombre : "Juan",
+    edad : 39,
+    altura : 1.19
+}
+
+const persona2 = {
+    nombre : "Marta",
+    edad : 20,
+    altura : 1.30
+}
+
+if(persona1.altura<persona2.altura && persona1.edad>persona2.edad){
+    console.log(`${persona1.nombre} tiene menos altura y es mayor que ${persona2.nombre}`)
+}
+else if(persona2.altura<persona1.altura && persona2.edad>persona1.edad){
+    console.log(`${persona2.nombre} tiene menos altura y es mayor que ${persona1}`)
+}
+
+
+//10
+let tuNombre = prompt("Ingrese su nombre")
+let tuEdad = Number(prompt("Ingrese su edad"))
+let tuAltura = prompt("Ingrese su altura en cm")
+let tuVisión = Number(prompt("Califica tu visión de 1 - 10"))
+
+if( tuEdad>=18 && tuAltura>150 && tuVisión>=8 && tuVisión<=10 ){
+    console.log("Estás capacitado para conducir")
+} else{
+    console.log("No estás capacitado para conducir")
+}
+
+
+//11
+let edadActual = Number(prompt("Ingresa tu edad"))
+
+if(edadActual>=0 && edadActual<=12){
+    console.log("Eres un infante")
+} else if(edadActual>=13 && edadActual<=18){
+    console.log("Eres un adolescente")
+} else if(edadActual>=19 && edadActual<=45){
+    console.log("Eres un adulto joven")
+} else if(edadActual>=45 && edadActual<=100){
+    console.log("Eres un anciano")
+} else{
+    console.log("¿En realidad tienes esa edad?")
+}
+
+
+//12
+let numerosDel1Al3 = Number(prompt("Ingrese un número del 1 al 3"))
+let cualquierNumero = Number(prompt("Ingrese un número que desee"))
+
+if(numerosDel1Al3 === 1){
+    alert(`El número ingresado es ${cualquierNumero}`)
+} else if(numerosDel1Al3 === 2) {
+    alert(`El doble del número ingresado es ${cualquierNumero*2}`)
+} else if(numerosDel1Al3 === 3) {
+    alert(`El triple del número ingresado es ${cualquierNumero*3}`)
+} else {
+    alert(`Ese valor no está permitido`)
+}
+
+*/
+//13
+let nombreCliente = prompt("Ingrese su nombre")
+let tipoDePasepase = prompt("¿Qué tipo de pase tiene, normal o vip?")
+let entrada = prompt("¿Tiene una entrada?")
+const miNombre = "Daniela"
+
+if(nombreCliente === miNombre || entrada === "vip"){
+    alert("¡Bienvenido!")
+} else if (entrada === "si") {
+    let entrada2 = prompt("¿Desea utilizarla?")
+    if (entrada2 === "si"){
+        alert("¡Bienvenido!")
+    } else {
+        alert("¡Hasta Pronto!")
+    }
+} else if (nombreCliente !== miNombre || entrada === "normal" || entrada === "no"){
+    let entrada3 = prompt("¿Desea comprar?")
+    if (entrada3 === "no"){
+        alert("¡Hasta Pronto!")
+    } else if (entrada3 === "si"){
+        dineroDisponible = prompt("¿Cuánto dinero disponible tiene?")
+        if (dineroDisponible >= 1000){
+            alert("¡Bienvenido!")
+        } else if (dineroDisponible<1000){
+            alert("¡Hasta Pronto!")
+        }
+    }
 }
