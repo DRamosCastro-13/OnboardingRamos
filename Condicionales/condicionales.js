@@ -149,14 +149,14 @@ if(numerosDel1Al3 === 1){
     alert(`Ese valor no está permitido`)
 }
 
-*/
+
 //13
 let nombreCliente = prompt("Ingrese su nombre")
-let tipoDePasepase = prompt("¿Qué tipo de pase tiene, normal o vip?")
+let tipoDePase = prompt("¿Qué tipo de pase tiene, normal o vip?")
 let entrada = prompt("¿Tiene una entrada?")
 const miNombre = "Daniela"
 
-if(nombreCliente === miNombre || entrada === "vip"){
+if(nombreCliente === miNombre || tipoDePase === "vip"){
     alert("¡Bienvenido!")
 } else if (entrada === "si") {
     let entrada2 = prompt("¿Desea utilizarla?")
@@ -165,7 +165,7 @@ if(nombreCliente === miNombre || entrada === "vip"){
     } else {
         alert("¡Hasta Pronto!")
     }
-} else if (nombreCliente !== miNombre || entrada === "normal" || entrada === "no"){
+} else if (nombreCliente !== miNombre || tipoDePase === "normal" || entrada === "no"){
     let entrada3 = prompt("¿Desea comprar?")
     if (entrada3 === "no"){
         alert("¡Hasta Pronto!")
@@ -178,3 +178,142 @@ if(nombreCliente === miNombre || entrada === "vip"){
         }
     }
 }
+
+
+//14
+const numeroIncognita = 7
+let numeroIngresado = Number(prompt("Ingresa un número del 1 al 10: "))
+if (numeroIngresado >= 1 && numeroIngresado <= 10) {
+    if (numeroIngresado == numeroIncognita) {
+        alert("Ganaste, haz adivinado el número")
+    } else if (numeroIngresado > numeroIncognita) {
+        alert("El número ingresado es mayor, vuelve a intentarlo.")
+        numeroIngresado = Number(prompt("Ingresa un número del 1 al 10: "))
+        if (numeroIngresado >= 1 && numeroIngresado <= 10) {
+            if (numeroIngresado == numeroIncognita) {
+                alert("Ganaste, haz adivinado el número")
+            } else if (numeroIngresado > numeroIncognita) {
+                alert("El número ingresado es mayor, vuelve a intentarlo.")
+                numeroIngresado = Number(prompt("Ingresa un número del 1 al 10: "))
+                if (numeroIngresado >= 1 && numeroIngresado <= 10) {
+                    if (numeroIngresado == numeroIncognita) {
+                        alert("Ganaste, haz adivinado el número")
+                    }
+                    else {
+                        alert("Perdiste, te has quedado sin intentos.")
+                    }
+                } else {
+                    alert("Por favor ingrese un número entre el 1 y el 10.")
+                }
+            } else {
+                alert("El número ingresado es menor, vuelve a intetarlo.")
+                numeroIngresado = Number(prompt("Ingrese un número del 1 al 10: "))
+                if (numeroIngresado >= 1 && numeroIngresado <= 10) {
+
+                    if (numeroIngresado == numeroIncognita) {
+                        alert("Ganaste, haz adivinado el número")
+                    }
+                    else {
+                        alert("Perdiste, te has quedado sin intentos.")
+                    }
+                } else {
+                    alert("Por favor ingrese un número entre el 1 y el 10.")
+                }
+            }
+        } else {
+            alert("Por favor ingrese un número entre el 1 y el 10.")
+        }
+    } else {
+        alert("El número ingresado es menor, vuelve a intetarlo.")
+        numeroIngresado = Number(prompt("Ingrese un número del 1 al 10: "))
+        if (numeroIngresado >= 1 && numeroIngresado <= 10) {
+            if (numeroIngresado == numeroIncognita) {
+                alert("¡Ganaste, haz adivinado el número!")
+            } else if (numeroIngresado > numeroIncognita) {
+                alert("El número ingresado es mayor, vuelve a intentarlo.")
+                numeroIngresado = Number(prompt("Ingrese un número del 1 al 10: "))
+                if (numeroIngresado >= 1 && numeroIngresado <= 10) {
+                    if (numeroIngresado == numeroIncognita) {
+                        alert("¡Ganaste, haz adivinado el número!")
+                    }
+                    else {
+                        alert("Perdiste, te has quedado sin intentos.")
+                    }
+                } else {
+                    alert("Por favor ingrese un número del 1 al 10")
+                }
+            } else {
+                alert("El número ingresado es menor, vuelve a intetarlo.")
+                numeroIngresado = Number(prompt("Ingrese un número del 1 al 10: "))
+                if (numeroIngresado >= 1 && numeroIngresado <= 10) {
+                    if (numeroIngresado == numeroIncognita) {
+                        alert("¡Ganaste, haz adivinado el número!")
+                    }
+                    else {
+                        alert("Perdiste, te has quedado sin intentos.")
+                    }
+                } else {
+                    alert("Por favor ingrese un número del 1 al 10.")
+                }
+            }
+        } else {
+            alert("Por favor ingrese un número entre el 1 y el 10.")
+        }
+    }
+} else {
+    alert("Por favor ingrese un número entre el 1 y el 10.")
+}
+
+
+//15
+let jugador1 = prompt("Jugador 1: Ingrese su elección")
+let jugador2 = prompt("Jugador 2: Ingrese su elección")
+
+if( jugador1 == "piedra" || jugador1 == "papel" || jugador1 == "tijera" && jugador2 == "piedra" || jugador2 == "papel" || jugador2 == "tijera" ) {
+    if (jugador1 == "piedra" && jugador2 == "piedra") {
+        alert("Empate")
+    } else if (jugador1 == "piedra" && jugador2 == "papel"){
+        alert("Jugador 2, gana")
+    } else if (jugador1 == "piedra" && jugador2 == "tijera") {
+        alert("Jugador 1, gana")
+    } else if (jugador1 == "papel" && jugador2 == "papel") {
+        alert("Empate")
+    } else if (jugador1 == "papel" && jugador2 == "tijera"){
+        alert("Jugador 2, gana")
+    } else if (jugador1 == "piedra" && jugador2 == "piedra") {
+        alert("Jugador 1, gana")
+    } else if (jugador1 == "tijera" && jugador2 == "tijera") {
+        alert("Empate")
+    } else if (jugador1 == "tijera" && jugador2 == "piedra"){
+        alert("Jugador 2, gana")
+    } else if (jugador1 == "tijera" && jugador2 == "papel") {
+        alert("Jugador 1, gana")
+    } else if ( jugador1 !== "piedra" || jugador1 !== "papel" || jugador1 !== "tijera" ){
+        alert("Uno de los jugadores hizo trampa")
+    } else if ( jugador2 !== "piedra" || jugador2 !== "papel" || jugador2 !== "tijera" ){
+        alert("Uno de los jugadores hizo trampa")
+    } 
+}
+---Cómo hacer para sacar la alerta de la trampa con cualquiera de los dos jugadores? 
+*/ 
+//16
+let valorNumerico1 = Number(prompt("Ingresa un número del 1 al 100"))
+let valorNumerico2 = Number(prompt("Ingresa otro número del 1 al 100"))
+let tipoDeOperacion = prompt("Ingresa un tipo de operación")
+
+if ( valorNumerico1 >=1 && valorNumerico2 <= 100 && valorNumerico2 >=1 && valorNumerico2 <=2 ) {
+    if (tipoDeOperacion == "suma"){
+        alert(`La suma de los dos valores es igual a ${ valorNumerico1 + valorNumerico2 }`)
+    } else if (tipoDeOperacion == "resta"){
+        alert(`La resta de los dos valores es igual a ${ valorNumerico1 - valorNumerico2 } `)
+    } else if (tipoDeOperacion == "multiplicación"){
+        alert(`El producto de lso valores es ${ valorNumerico1 * valorNumerico2 }`)
+    } else if (tipoDeOperacion == "división"){
+        alert(`El cociente de los valores es ${ valorNumerico1 / valorNumerico2 }`)
+    }
+} else if (valorNumerico2 == 0 && tipoDeOperacion == "división") {
+    alert("¡Error! El divisor no puede ser 0, vuelva a ingresar un número")
+    valorNumerico2 = Number(prompt("Ingresa un número del 1 al 100"))
+    alert(`El cociente de los valores es ${ valorNumerico1 / valorNumerico2 }`)
+}
+
