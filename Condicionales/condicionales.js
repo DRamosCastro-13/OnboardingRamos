@@ -263,7 +263,7 @@ if (numeroIngresado >= 1 && numeroIngresado <= 10) {
 } else {
     alert("Por favor ingrese un número entre el 1 y el 10.")
 }
-
+*/
 
 //15
 let jugador1 = prompt("Jugador 1: Ingrese su elección")
@@ -288,14 +288,14 @@ if( jugador1 == "piedra" || jugador1 == "papel" || jugador1 == "tijera" && jugad
         alert("Jugador 2, gana")
     } else if (jugador1 == "tijera" && jugador2 == "papel") {
         alert("Jugador 1, gana")
-    } else if ( jugador1 !== "piedra" || jugador1 !== "papel" || jugador1 !== "tijera" ){
-        alert("Uno de los jugadores hizo trampa")
-    } else if ( jugador2 !== "piedra" || jugador2 !== "papel" || jugador2 !== "tijera" ){
+    } else {
         alert("Uno de los jugadores hizo trampa")
     } 
 }
----Cómo hacer para sacar la alerta de la trampa con cualquiera de los dos jugadores? 
-*/ 
+
+
+//Cómo hacer para sacar la alerta de la trampa con cualquiera de los dos jugadores? 
+
 //16
 let valorNumerico1 = Number(prompt("Ingresa un número del 1 al 100"))
 let valorNumerico2 = Number(prompt("Ingresa otro número del 1 al 100"))
