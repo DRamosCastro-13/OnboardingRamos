@@ -72,21 +72,39 @@ console.log(`Acertaste! El número secreto era ${resultado}, realizaste ${contar
 */
 //6
 let valorADividir = Number(prompt("Ingresa un número cuyo residual sea 0"))
-let numeroDivisor = [ ] 
+let numeroDivisor = [] 
 
-if ( valorADividir % numeroDivisor == 0 ) {
-    for (numeroDivisor = 1 ; valorADividir % numeroDivisor == 0 ; numeroDivisor-- ) {
-        console.log( numeroDivisor )
-    }
+while ( valorADividir % numeroDivisor == 0 ){
+    numeroDivisor++;
+    console.log(numeroDivisor);
+    
 }
 
 
+/*
 //7
+function sonarCampana() {
+    console.log("Ding Dong");
+    return "Ding Dong, "
+}
 
+let acumulado = 0
+
+for (let campanada = 0; campanada < 5; campanada++){
+    acumulado++
+    console.log(sonarCampana(acumulado))
+} 
 
 //8
+const fechaLimite = "1997-8-3"
+const fechas = ["1984-10-2", "1990-3-2", "1973-15-7", "2024-21-10", "2001-1-9"]
 
+for (let i = 0; fechas >= fechaLimite; i++ ) {
+    if (fechas[i] >= fechaLimite)
+    console.log(fechas[i])
+}
 
+*/
 //9
 
 
